@@ -17,7 +17,6 @@ Note: A leaf is a node with no children.
 #         self.left = None
 #         self.right = None
 
-```
 class Solution:
     def minDepth(self, root: TreeNode) -> int:
         if root == None: # Empty Node
