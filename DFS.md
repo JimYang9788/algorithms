@@ -1,4 +1,4 @@
-1. DFS 
+## 1. DFS 
 
 1.1 Minimum Depth of Binary Tree
 Level: Easy
