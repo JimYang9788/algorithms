@@ -8,7 +8,9 @@ def count_bits (x):
         num_bits += x & 1 
         x >>= 1 
     return num_bits 
-   
+
+
+# 4.1. Parity
 # The parity returns 1 if the number of 
 # 1s in the binary representation of the 
 # number is odd, else return 0  
@@ -49,7 +51,6 @@ def parity3 (x):
             & bit_mask] ^ PRECOMPUTED_PARITY[x & bit_mask])
 
 
-
 def parity4 (x):
     x ^= x >> 32
     x ^= x >> 16
@@ -59,3 +60,23 @@ def parity4 (x):
     x ^= x >> 1
     return x & 0x1 
 
+
+# 4.2 Swap Bits 
+# given a 64-bit integer, reverse the location 
+# of bit at index i and j. 
+
+# Hint 
+# 0 ^ 1 -> 1
+# 1 ^ 1 -> 0 
+
+# 0 ^ 0 -> 0 
+# 1 ^ 0 -> 1 
+# 可以用 ^0 来perserve 原来的order
+# 可以用 ^1 来帮助flip single bit  
+
+def swap_bit (x,i,j):
+    if (x >> i) & 1 != (x >> j) & 1:
+        # The digit at i and j differs...
+        bit_mask = (1 << i) | (1 << j)
+        x ^= bit_mask
+    return x 
