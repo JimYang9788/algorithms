@@ -37,3 +37,25 @@ def parity2 (x):
         x &= x - 1 # Drops the lowest set bit of x 
     return result 
 
+
+# Idea, cache the result as you compute. 
+def parity3 (x):
+    PRECOMPUTED_PARITY = {}
+    mask_size = 16 
+    bit_mask = 0xFFFF 
+    return (PRECOMPUTED_PARITY[x >> (3 * mask_size)] ^ 
+            PRECOMPUTED_PARITY[(x >> (2 * mask_size)) & bit_mask] ^ 
+            PRECOMPUTED_PARITY[(x >> mask_size)
+            & bit_mask] ^ PRECOMPUTED_PARITY[x & bit_mask])
+
+
+
+def parity4 (x):
+    x ^= x >> 32
+    x ^= x >> 16
+    x ^= x >> 8
+    x ^= x >> 4
+    x ^= x >> 2
+    x ^= x >> 1
+    return x & 0x1 
+
