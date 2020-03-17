@@ -64,8 +64,28 @@ def dutch_flag3 (A, i):
     # 其实是一个左右放pointer， 然后忘交界口进行交换的算法
 
 
+# 5.2 Increment an arbitrary integer 
+# Write a program which takes as input an array of diits encoding 
+# a nonnegative decimal integer D. Updates the arrayto represent the 
+# integer D+1.
+# [1,2,3] -> [1,2,4]
+
+def plus_one1(A):
+    carry_over = 1 
+    for i in reversed(range(len(A))):
+        res = A[i] + carry_over
+        if res // 10 != 0:
+            res = res % 10
+        else:
+            carry_over = 0
+        A[i] = res
+    
+    if carry_over != 0:
+        A = [carry_over] + A
+    return A 
+
 
 
 if __name__ =='__main__':
-    A = [1,4,3,2,2]
-    print (dutch_flag1(A, 3))
+    A = [9,9,9,9,9]
+    print (plus_one1(A))
