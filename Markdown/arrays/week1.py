@@ -82,6 +82,9 @@ def plus_one1(A):
     
     if carry_over != 0:
         A = [carry_over] + A
+    # 骚操作，因为只可能[9,9,9,9]才会有加项，所以[0,0,0,0]的基础上改A[0]=1,A.append(0)来避免多余的一次O(n)
+    # A[0] = 1 
+    # A.append (0)
     return A 
 
 
