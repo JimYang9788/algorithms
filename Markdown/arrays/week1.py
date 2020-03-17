@@ -14,6 +14,7 @@
 # and rearrages the elements such that all elements less than A[i]
 # appears first
 
+# Solution 1, very trivial 
 def dutch_flag1(A, i):
     pivot = A[i]
     less, equal, greater = [], [], []
@@ -26,6 +27,27 @@ def dutch_flag1(A, i):
             greater.append(val)
     A = less + equal + greater  # O(n) in time and space 
     return A 
+
+# Solution 2: Swap O(n) with O(1) Space Complexity 
+def dutch_flag2(A, i):
+    pivot = A[i]
+    smaller = 0 
+    for i in range (len (A)):
+        if A[i] < pivot:
+            A[i], A[smaller] = A[smaller], A[i] # Through Swapping, Group all the smaller elements to the left hand side 
+            smaller += 1 
+
+    larger = len(A) - 1 
+    for i in  reversed(range(len (A))):
+        if A[i] > pivot:
+            A[larger], A[i] = A[i], A[larger]
+            larger -= 1 
+    
+    return A 
+    
+
+
+
 
 
 if __name__ =='__main__':
