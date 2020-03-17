@@ -46,6 +46,22 @@ def dutch_flag2(A, i):
     return A 
     
 
+# Solution 3: partition but with one pass 
+
+def dutch_flag3 (A, i):
+    pivot = A[i]
+    smaller, equal , larger = 0,0,len(A)
+    while equal < larger:
+        if A[equal] < pivot:
+            A[smaller], A[equal] = A[equal], A[smaller]
+            smaller, equal = smaller + 1, equal + 1
+        elif A[equal] == pivot:
+            equal += 1 
+        else:
+            larger -= 1 
+            A[equal], A[larger] = A[larger], A[equal]
+    # Equal is the unclassified dude
+    # 其实是一个左右放pointer， 然后忘交界口进行交换的算法
 
 
 
