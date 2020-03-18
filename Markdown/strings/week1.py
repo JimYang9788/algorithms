@@ -11,7 +11,7 @@ import functools
 def str_to_int(s):
     return (-1 if s[0] == '-' else 1) * functools.reduce(
         lambda running_sum, c: running_sum * 10 + string.digits.index(c),
-        s[s[0] in '-+':],0)
+        s[s[0] in '-+': ],0) # 骚得一批...s[s[0] in '-+':] 就是s作为list来用，但是slice了开始位置..
 
 # e.g. 123, 321 -> "123", "321"
 
