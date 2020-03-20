@@ -5,7 +5,12 @@
 # Design a stack that includes a max operation, in addition to 
 # push and pop. The max returns the maximum value on the stack 
 
+
+# Textbook uses a pair instead of maintaing two lists. 
+# Which I see to benefit more from parallel programming 
+
 class Stack:
+
 
     content = []
     max_val = [] 
