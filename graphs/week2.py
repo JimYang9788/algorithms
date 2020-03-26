@@ -17,6 +17,4 @@ def maze_search (maze, s, e):
         maze[cur.x][cur.y] == BLACK
         if cur == e :
             return True
-
-        
-        return False
+        return 
