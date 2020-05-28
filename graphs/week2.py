@@ -1,5 +1,6 @@
 # Graphs 
 # 1 Search through a Maze 
+# DFS Version
 import collections
 
 Coordinate = collections.namedtuple('Coordinate', ('x','y'))
