@@ -64,3 +64,11 @@ class Solution:
             if primes[i]:
                 primes[i * i: n: i] = [False] * len(primes[i * i: n: i])
         return sum(primes)
+
+class Solution:
+    def hammingWeight(self, n: int) -> int:
+        sum_total = 0
+        while (n!=0):
+            sum_total += 1 
+            n &= n - 1 
+        return sum_total
