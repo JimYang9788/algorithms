@@ -72,3 +72,23 @@ class Solution:
             sum_total += 1 
             n &= n - 1 
         return sum_total
+
+
+        def hammingWeight(int n):
+            bits = 0;
+            mask = 1;
+            for (i = 0; i < 32; i++) {
+                if ((n & mask) != 0) {
+                bits++;
+            }
+            mask <<= 1;
+    }
+    return bits;
+}
+
+class Solution:
+
+    
+    def hammingDistance(self, x: int, y: int) -> int:
+
+        return bin(x ^ y).count('1')
