@@ -86,6 +86,14 @@ class Solution:
     return bits;
 }
 
+
+class Solution:
+    def missingNumber(self, nums: List[int]) -> int:
+        total_length = len(nums) + 1 
+        total_sum = (0 + total_length - 1) * total_length / 2 
+        
+        return int (total_sum - sum (nums))
+
 class Solution:
 
     
