@@ -144,7 +144,27 @@ class Solution:
                 if i in row_set or j in col_set:
                     matrix[i][j] = 0
                 
-            
+
+class Solution:
+    def is_palindrome (self, s):
+        while s:
+            if len (s) == 1:
+                return True
+            elif s[0] == s[-1]:
+                s = s[1:-1]
+            else:
+                return False     
+        return True
+        
+    def longestPalindrome(self, s: str) -> str:
+        cur_max = ""
+        for i in range (0, len(s)+1):
+            for j in range (i, len(s)+1):
+                if len(s[i:j]) > len(cur_max) and self.is_palindrome(s[i:j]):
+                    cur_max = s[i:j]
+                    
+        return cur_max 
+                
 
 if __name__ == '__main__':
     zeros = Solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
