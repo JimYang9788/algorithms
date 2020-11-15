@@ -122,23 +122,29 @@ class Solution:
                     row[idx] = 0
         
         
+class Solution:
+
+        
+        
     def setZeroes(self, matrix: List[List[int]]) -> None:
         """
         Do not return anything, modify matrix in-place instead.
         """
-        if not matrix : return [] 
-        if not matrix[0]: return [[]] 
+        row_set = set()
+        col_set = set()
+        for i,row in enumerate (matrix):
+            for j,cell in enumerate (row):
+                if cell == 0:
+                    row_set.add(i)
+                    col_set.add(j)
         
-         
-        m = len (matrix)
-        n = len (matrix[0])
-        output = [[1] * n] * m
-        
-        print (output)
-        for i in range (m):
-            for j in range (n):
-                if matrix[i][j] == 0:
-                    self.set_row (i, output)
-                    self.set_col (j, output)
-        matrix = output 
-    
+        # Iterate again 
+        for i,row in enumerate (matrix):
+            for j,cell in enumerate (row):
+                if i in row_set or j in col_set:
+                    matrix[i][j] = 0
+                
+            
+
+if __name__ == '__main__':
+    zeros = Solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
