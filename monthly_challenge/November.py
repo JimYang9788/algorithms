@@ -65,27 +65,6 @@ class Solution:
                 primes[i * i: n: i] = [False] * len(primes[i * i: n: i])
         return sum(primes)
 
-class Solution:
-    def hammingWeight(self, n: int) -> int:
-        sum_total = 0
-        while (n!=0):
-            sum_total += 1 
-            n &= n - 1 
-        return sum_total
-
-
-        def hammingWeight(int n):
-            bits = 0;
-            mask = 1;
-            for (i = 0; i < 32; i++) {
-                if ((n & mask) != 0) {
-                bits++;
-            }
-            mask <<= 1;
-    }
-    return bits;
-}
-
 
 class Solution:
     def missingNumber(self, nums: List[int]) -> int:
@@ -124,3 +103,42 @@ class Solution:
         
         prev_res.append (cur_row)
         return prev_res 
+
+
+class Solution:
+    def set_row(self, target, matrix):
+        print ('begin: target',target, matrix)
+        for idx,row in enumerate(matrix):
+            if idx == target:
+                for j, val in enumerate(matrix[idx]):
+                    print (matrix[idx][j])
+                    matrix[idx][j] = 0
+        print ("end",target, matrix)
+    
+    def set_col(self, j, matrix):
+        for row in matrix:
+            for idx, val in enumerate (matrix):
+                if idx == j:
+                    row[idx] = 0
+        
+        
+    def setZeroes(self, matrix: List[List[int]]) -> None:
+        """
+        Do not return anything, modify matrix in-place instead.
+        """
+        if not matrix : return [] 
+        if not matrix[0]: return [[]] 
+        
+         
+        m = len (matrix)
+        n = len (matrix[0])
+        output = [[1] * n] * m
+        
+        print (output)
+        for i in range (m):
+            for j in range (n):
+                if matrix[i][j] == 0:
+                    self.set_row (i, output)
+                    self.set_col (j, output)
+        matrix = output 
+    
