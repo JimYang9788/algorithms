@@ -100,3 +100,27 @@ class Solution:
     def hammingDistance(self, x: int, y: int) -> int:
 
         return bin(x ^ y).count('1')
+
+
+class Solution:
+
+    def generate(self, numRows: int) -> List[List[int]]:
+        n = numRows
+        if n == 0:
+            return []
+        elif n == 1:
+            return [[1]]
+        elif n == 2:
+            return [[1],[1,1]]
+
+        prev_res = self.generate (n-1)
+        prev_row = prev_res[-1]
+        cur_row = [1] * n
+        for i in range (n):
+            if i == 0 or i == n - 1:
+                continue
+            else:
+                cur_row[i] = prev_row[i] + prev_row [i-1]
+        
+        prev_res.append (cur_row)
+        return prev_res 
