@@ -166,5 +166,41 @@ class Solution:
         return cur_max 
                 
 
+## Wrong Solution
+
+class Solution:
+    def find_max(self,target,nums, D):
+        max_so_far = -1 
+        for i,n in enumerate (nums):
+            if target > n:
+                print (target, n)
+                max_so_far = D[i] + 1 
+        return max_so_far 
+    
+    def increasingTriplet(self, nums: List[int]) -> bool:
+        if len(nums) <= 2: return False 
+        
+        D = [0] * len(nums)
+        D[0] = 1 
+        max_so_far = 1 
+        for i, val in enumerate(nums):
+            if i == 0: 
+                continue 
+            D[i] = max (max_so_far, self.find_max(val,nums[:i],D))
+            max_so_far = max(max_so_far, D[i])
+        print (D)
+        return D[-1] >= 3 
+    
+def increasingTriplet(nums):
+    first = second = float('inf')
+    for n in nums:
+        if n <= first:
+            first = n
+        elif n <= second:
+            second = n
+        else:
+            return True
+    return False
+
 if __name__ == '__main__':
     zeros = Solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
