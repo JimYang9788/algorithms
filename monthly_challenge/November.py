@@ -191,16 +191,35 @@ class Solution:
         print (D)
         return D[-1] >= 3 
     
-def increasingTriplet(nums):
-    first = second = float('inf')
-    for n in nums:
-        if n <= first:
-            first = n
-        elif n <= second:
-            second = n
-        else:
-            return True
-    return False
+    def increasingTriplet(nums):
+        first = second = float('inf')
+        for n in nums:
+            if n <= first:
+                first = n
+            elif n <= second:
+                second = n
+            else:
+                return True
+        return False
 
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
+class Solution:
+    def oddEvenList(self, head: ListNode) -> ListNode:
+        dummy1 = odd = ListNode(0)
+        dummy2 = even = ListNode(0)
+        while head:
+            odd.next = head
+            even.next = head.next
+            odd = odd.next
+            even = even.next
+            head = head.next.next if even else None
+        odd.next = dummy2.next
+        return dummy1.next
+        
 if __name__ == '__main__':
     zeros = Solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
