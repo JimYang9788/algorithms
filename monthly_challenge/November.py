@@ -221,5 +221,19 @@ class Solution:
         odd.next = dummy2.next
         return dummy1.next
         
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> ListNode:
+        hash_set = {}
+        dummy1 = headA 
+        dummy2 = headB
+        while (dummy1):
+            hash_set [dummy1] = 1
+            dummy1 = dummy1.next 
+            
+        while (dummy2):
+            if dummy2 in hash_set:
+                return dummy2 
+            dummy2 = dummy2.next
+            
 if __name__ == '__main__':
     zeros = Solution.setZeroes([[1,1,1],[1,0,1],[1,1,1]])
