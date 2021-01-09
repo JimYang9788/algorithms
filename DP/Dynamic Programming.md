@@ -28,5 +28,19 @@ $$D[i][j]=D[i-1][j-1] + 1$$ if $s[i]==s[j]$ else $\max \  D[i][j-1], D[i-1][j]$
 
 **Prompt**: 从index跳另外一个Index
 
-$minSteps[i] = min D[j] + 1 $ ($0\le j<i$) , and j reachable to i
+普通的DP解法 $minSteps[i] = min D[j] + 1 $ ($0\le j<i$) , and j reachable to i
+
+一个更好的BFS解法
+
+```python
+def jump(self, nums):
+    if len(nums) <= 1: return 0
+    l, r = 0, nums[0]
+    times = 1
+    while r < len(nums) - 1:
+        times += 1
+        nxt = max(i + nums[i] for i in range(l, r + 1))
+        l, r = r, nxt
+    return times
+```
 
