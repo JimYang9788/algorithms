@@ -24,4 +24,9 @@ $$D[i][j]=D[i-1][j-1] + 1$$ if $s[i]==s[j]$ else $\max \  D[i][j-1], D[i-1][j]$
 
 
 
-2. 
+2. **Minimum Steps**
+
+**Prompt**: 从index跳另外一个Index
+
+$minSteps[i] = min D[j] + 1 $ ($0\le j<i$) , and j reachable to i
+
