@@ -4,9 +4,13 @@
 
 
 
-1. Validate Binary Tree
+1. **Validate Binary Tree**
 
 **Test Point:** Understand the logic of Binary Search Tree 
+
+**易错点** 不能单单检查每个Node的Validility，需要知道上下限
+
+**Source:** Leetcode Q98
 
 O(n) | O(1)
 
@@ -21,3 +25,8 @@ class Solution(object):
                self.isValidBST(root.right, lessThan, max(root.val, largerThan))
 ```
 
+
+
+
+
+2. 
