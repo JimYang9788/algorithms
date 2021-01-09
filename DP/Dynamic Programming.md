@@ -14,12 +14,6 @@
 
    
 
-
-
-
-
-
-
 1. **Longest Common Subsequence**
 
 **Prompt**: 寻找两个String最长的Common Subsequence
@@ -30,3 +24,4 @@ $$D[i][j]=D[i-1][j-1] + 1$$ if $s[i]==s[j]$ else $\max \  D[i][j-1], D[i-1][j]$
 
 
 
+2. 
