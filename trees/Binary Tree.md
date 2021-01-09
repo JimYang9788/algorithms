@@ -1,9 +1,5 @@
 ### Binary Tree
 
-
-
-
-
 1. **Validate Binary Tree**
 
 **Test Point:** Understand the logic of Binary Search Tree 
