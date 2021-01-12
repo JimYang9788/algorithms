@@ -4,7 +4,7 @@
 
 $O(log(m+n)) | O(1)$
 
-解题思路: 解题思路还是很直接，就是median的对比，然后进行筛选 
+解题思路: 解题思路就是median的对比，然后进行筛选，将小于小Median的去掉，将大于大Median的去掉
 
 ```python
 class Solution:
