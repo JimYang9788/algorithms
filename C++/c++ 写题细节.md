@@ -8,5 +8,29 @@
 
      
 
+2. String 
+
+   ``string.length ()`` 查string length 
+
+   
+
+3. Vector ()
+
+   ``vector <int> subset``
+
+   常用： 
+
+   ``vector.push_back (num)``
+
+
+
+4. map 
+
+   ``map <char, int>::iterator it;``
+
+   ``for (it = map.begin(); it != map.end(); it ++){ cout << it.first << it.second}`` 取信息
+
+   ``if (map.find (element) != map.end())`` 检查在不在里面
+
    
 
