@@ -30,7 +30,29 @@ int main (){
     // Typedef 
     typedef std::unordered_map<std::string, int> ScoreMap;
     ScoreMap map2;
-    
+    map ["jim"] = 1;
+
+    // Iterators are a generalization of pointers. So a pointer IS an iterator.
+    //  But not necessarily the other way round. I
+    for (scoreMap::const_iterator it = map.begin(); it != map.end(); it ++ ){
+        auto & key = it->first;
+        auto & value = it->second; 
+        std::cout << key << ":" << value << std::endl;
+
+    }
+
+    // Using range based for loop
+    for (auto& it : map ){
+        auto & key = it.first;
+        auto & value = it.second; 
+        std::cout << key << ":" << value << std::endl;
+    }
+
+    // Even better, using binding from c++11
+    for (auto&[k,v]: map){
+        std::cout << k << ":" << v << std::endl;
+    }
+
     
     map ["jim"] = 5;
     
