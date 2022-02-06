@@ -1,4 +1,4 @@
-## Array 解题思路和常见题型
+## Arrays
 
 ### 1. 思路ToolBox
 
