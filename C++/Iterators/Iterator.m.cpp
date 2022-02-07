@@ -2,7 +2,7 @@
 #include <vector>
 #include <unordered_map>
 
-int main (){
+void vectorImplementation (){
     std::vector <int> values = {1,2,3,4};
 
     // standard way with i to iterate
@@ -56,6 +56,9 @@ int main (){
     
     map ["jim"] = 5;
     
+}
+int main (){
+
 
 
 }
