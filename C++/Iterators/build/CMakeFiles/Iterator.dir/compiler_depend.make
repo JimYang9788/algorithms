@@ -232,8 +232,11 @@ CMakeFiles/Iterator.dir/Iterator.m.cpp.o: ../Iterator.m.cpp \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/math.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/math.h \
   /Library/Developer/CommandLineTools/usr/include/c++/v1/__node_handle \
-  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional
+  /Library/Developer/CommandLineTools/usr/include/c++/v1/optional \
+  ../vector.h
 
+
+../vector.h:
 
 /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/math.h:
 
