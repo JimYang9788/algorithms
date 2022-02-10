@@ -1,6 +1,7 @@
 #include <iostream>
 #include <vector>
 #include <unordered_map>
+#include "vector.h"
 
 void vectorImplementation (){
     std::vector <int> values = {1,2,3,4};
@@ -34,7 +35,7 @@ void vectorImplementation (){
 
     // Iterators are a generalization of pointers. So a pointer IS an iterator.
     //  But not necessarily the other way round. I
-    for (scoreMap::const_iterator it = map.begin(); it != map.end(); it ++ ){
+    for (scoreMap::iterator it = map.begin(); it != map.end(); it ++ ){
         auto & key = it->first;
         auto & value = it->second; 
         std::cout << key << ":" << value << std::endl;
@@ -57,8 +58,20 @@ void vectorImplementation (){
     map ["jim"] = 5;
     
 }
+
 int main (){
-
-
-
+    Vector <std::string> vector;
+    vector.push_back("jim");
+    vector.push_back("c++");
+    vector.push_back("c++");
+    vector.push_back("c++");
+    vector.push_back("c++");
+    vector.push_back("c++");
+    vector.push_back("jim");
+    vector.push_back("jim");
+    vector.push_back("jim");
+    vector.push_back("jim");
+    vector.push_back("jim");
+    vector.print();
+    // vectorImplementation();
 }
