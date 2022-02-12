@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include "template.h"
 
 // Template function 
 template <class T, class B>
@@ -28,16 +28,8 @@ T mysequence<T,N>::getmember (int x) {
 }
 
 int main (){
-    std::cout <<  GetMax(1,2,"s","s") << std::endl;
-    mysequence <int,5> myints;
-    mysequence <double,5> myfloats;
-    myints.setmember (0,100);
-    myfloats.setmember (3,3.1416);
-    using namespace std;
-    {
-        cout << myints.getmember(0) << '\n';
-        cout << myfloats.getmember(3) << '\n';
-    } // namespace std::
-
+    Print(1);
+    Array<5> array;
+    std::cout << array.get_size() << std::endl;
     return 0;
 }
