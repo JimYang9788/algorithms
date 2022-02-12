@@ -1,3 +1,0 @@
-/Users/jimyang/projects/algorithms/C++/petproject/build/CMakeFiles/petproject.tsk.dir
-/Users/jimyang/projects/algorithms/C++/petproject/build/CMakeFiles/edit_cache.dir
-/Users/jimyang/projects/algorithms/C++/petproject/build/CMakeFiles/rebuild_cache.dir
