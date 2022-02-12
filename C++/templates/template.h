@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 
+// using template for actual argument (the way how to define a class)
 template <int T>
 class Array
 {
