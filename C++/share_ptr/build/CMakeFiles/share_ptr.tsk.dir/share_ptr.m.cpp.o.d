@@ -1,5 +1,6 @@
 CMakeFiles/share_ptr.tsk.dir/share_ptr.m.cpp.o: \
   /Users/jimyang/Projects/algorithms/C++/share_ptr/share_ptr.m.cpp \
+  /Users/jimyang/Projects/algorithms/C++/share_ptr/share_pointer.h \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \
