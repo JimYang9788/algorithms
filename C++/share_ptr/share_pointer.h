@@ -1,7 +1,7 @@
 #ifndef SHARE_POINTER
 #define SHARE_POINTER
 #include <iostream>
-
+#include <memory>
 template <typename T>
 class SharePointer
 {
@@ -45,14 +45,15 @@ public:
     }
 
 
-    // Copy Assignment
+    // Move Assignment
     SharePointer<T>& operator=(SharePointer &&sp)
     {
+        // 相当于也在swap
         std::cout << "Move Assignment" << std::endl;
-        (*d_count)--;
+        (*d_count)--; // 之前指着A， A.d_count --;
         d_ptr = sp.get_ptr();
         d_count = sp.get_d_count();
-        (*d_count)++;
+        (*d_count)++; // 现在指B，B.d_count ++; 
         return *this;
     }
 
