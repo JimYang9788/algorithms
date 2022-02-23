@@ -7,7 +7,7 @@ class SharePointer
 {
 public:
     // Constructor
-    SharePointer<T>(T *ptr) : d_ptr(ptr), d_count(nullptr)
+    explicit SharePointer<T>(T *ptr) : d_ptr(ptr), d_count(nullptr)
     {
         std::cout << "Constructor Called" << std::endl;
         d_count = new size_t;
