@@ -1,11 +1,12 @@
 #include <iostream>
 
+template <typename T>
 class UniquePointer
 {
 public:
-    UniquePointer() : a(1) {}
-    void Print() { std::cout << "sup" << std::endl; }
+    UniquePointer<T>(T *ptr) {}
+    UniquePointer<T>() {}
 
 private:
-    int a;
+    T *d_ptr;
 };

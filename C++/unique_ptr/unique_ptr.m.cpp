@@ -3,6 +3,5 @@
 int main()
 {
     std::cout << "hello world" << std::endl;
-    UniquePointer u = UniquePointer();
-    u.Print();
+    UniquePointer u = UniquePointer<int *>();
 }
