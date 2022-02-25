@@ -34,7 +34,7 @@ public:
     }
 
     // Copy Assignment
-    SharePointer<T>& operator=(SharePointer &sp)
+    SharePointer<T> &operator=(SharePointer &sp)
     {
         std::cout << "Copy Assignment" << std::endl;
         (*d_count)--;
@@ -44,16 +44,15 @@ public:
         return *this;
     }
 
-
     // Move Assignment
-    SharePointer<T>& operator=(SharePointer &&sp)
+    SharePointer<T> &operator=(SharePointer &&sp)
     {
         // 相当于也在swap
         std::cout << "Move Assignment" << std::endl;
         (*d_count)--; // 之前指着A， A.d_count --;
         d_ptr = sp.get_ptr();
         d_count = sp.get_d_count();
-        (*d_count)++; // 现在指B，B.d_count ++; 
+        (*d_count)++; // 现在指B，B.d_count ++;
         return *this;
     }
 
