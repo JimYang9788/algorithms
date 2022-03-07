@@ -8,7 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/Users/jimyang/Projects/algorithms/C++/virtual-function/virtual-function.m.cpp" "CMakeFiles/virtual-function.tsk.dir/virtual-function.m.cpp.o" "gcc" "CMakeFiles/virtual-function.tsk.dir/virtual-function.m.cpp.o.d"
+  "/Users/jimyang/projects/algorithms/C++/virtual-function/virtual-function.m.cpp" "CMakeFiles/virtual-function.tsk.dir/virtual-function.m.cpp.o" "gcc" "CMakeFiles/virtual-function.tsk.dir/virtual-function.m.cpp.o.d"
   )
 
 # Targets to which this target links.

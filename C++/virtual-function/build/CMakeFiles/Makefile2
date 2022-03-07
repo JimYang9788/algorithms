@@ -54,10 +54,10 @@ RM = /usr/local/Cellar/cmake/3.22.2/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/jimyang/Projects/algorithms/C++/virtual-function
+CMAKE_SOURCE_DIR = /Users/jimyang/projects/algorithms/C++/virtual-function
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/jimyang/Projects/algorithms/C++/virtual-function/build
+CMAKE_BINARY_DIR = /Users/jimyang/projects/algorithms/C++/virtual-function/build
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -81,14 +81,14 @@ clean: CMakeFiles/virtual-function.tsk.dir/clean
 CMakeFiles/virtual-function.tsk.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/virtual-function.tsk.dir/build.make CMakeFiles/virtual-function.tsk.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/virtual-function.tsk.dir/build.make CMakeFiles/virtual-function.tsk.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles --progress-num=1,2 "Built target virtual-function.tsk"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles --progress-num=1,2 "Built target virtual-function.tsk"
 .PHONY : CMakeFiles/virtual-function.tsk.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/virtual-function.tsk.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles 2
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/virtual-function.tsk.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles 0
 .PHONY : CMakeFiles/virtual-function.tsk.dir/rule
 
 # Convenience name for target.

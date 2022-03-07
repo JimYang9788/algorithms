@@ -1,5 +1,5 @@
 CMakeFiles/virtual-function.tsk.dir/virtual-function.m.cpp.o: \
-  /Users/jimyang/Projects/algorithms/C++/virtual-function/virtual-function.m.cpp \
+  /Users/jimyang/projects/algorithms/C++/virtual-function/virtual-function.m.cpp \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/iostream \
   /Library/Developer/CommandLineTools/usr/bin/../include/c++/v1/__config \
   /Library/Developer/CommandLineTools/SDKs/MacOSX10.15.sdk/usr/include/pthread.h \

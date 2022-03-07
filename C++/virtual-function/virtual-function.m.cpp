@@ -4,26 +4,38 @@ using namespace std;
 
 class Animal
 {
-public:
+private:
     virtual void print() = 0;
-
     void type() { std::cout << "I am an animal" << std::endl; }
 
-private:
     int height = 0;
 };
 
-class Piggy : public Animal
+class Piggy : protected Animal
 {
 public:
     void print() { std::cout << "I am a Piggy" << std::endl; }
 };
 
+class Dog : public Animal
+{
+public:
+    void print() { std::cout << "I am a Dog" << std::endl; }
+};
+
 int main()
 {
+    // Animal *a = new Piggy(); // ptr size -> 8 bytes;
+    // Animal *b = new Dog();
     Piggy p = Piggy();
     p.print();
-    p.type();
-    std::cout
-        << "hello world" << std::endl;
+    // Animal &d = p;
+    // d.print();
 }
+
+//  * ClassName|function name
+//  * ------------------------
+//  * Piggy    | d_piggy_print
+//  * Dog      | d_doggy_print
+//  *
+//  *

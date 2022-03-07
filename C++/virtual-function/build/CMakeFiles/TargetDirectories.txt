@@ -1,3 +1,3 @@
-/Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles/virtual-function.tsk.dir
-/Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles/edit_cache.dir
-/Users/jimyang/Projects/algorithms/C++/virtual-function/build/CMakeFiles/rebuild_cache.dir
+/Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles/virtual-function.tsk.dir
+/Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles/edit_cache.dir
+/Users/jimyang/projects/algorithms/C++/virtual-function/build/CMakeFiles/rebuild_cache.dir
